@@ -16,13 +16,13 @@
 <body>
 
   <header>
-    <nav class="navbar navbar-expand-lg bg-header">
+    <nav class="navbar navbar-expand-lg bg-header fixed-top">
         <div class="container-fluid">
           <a class="navbar-brand" href="#home">
             <img src="./img/Logo 2.png" alt="Logo del desarrollador" class="logo">
           </a>
     <!--Boton hamburguesa-->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -51,6 +51,10 @@
 
     <main>
         <section class="hero">
+            
+            <div class="imagen-hero">
+                <img src="./img/perfil.jpg" alt="Retrato de Pau, Desarrolladora Web y Diseñadora Ux Ui">
+            </div>
             <div class="presentacion">
                 <h1>Hola, soy Pau</h1>
                 <h2>Desarrolladora Web <span>y</span> Diseñadora Ux Ui</h2>
@@ -60,9 +64,6 @@
                 <button class="inactivo">
                     <a href="#contacto">Contacto</a>
                 </button>
-            </div>
-            <div class="imagen-hero">
-                <img src="./img/perfil.jpg" alt="Retrato de Pau, Desarrolladora Web y Diseñadora Ux Ui">
             </div>
         </section>
 
@@ -74,7 +75,7 @@
                     </p>
                 </div>
                 <div class="imagen-sobre-mi">
-                    <img src="./img/perfil.jpg" alt="Foto de Pau trabajando en diseño UX/UI">
+                    <img src="./img/viaje.jpeg" alt="Foto de Pau trabajando en diseño UX/UI">
                 </div>
             </div>
         </section>
@@ -82,16 +83,16 @@
         <section id="proyectos" class="proyectos">
           <div>
             <h2 class="titulo-seccion">Proyectos</h2>
-            <div class="row">
+          <div class="row">
               <!--Card 1-->
               <div class="col-md-4">
                 <div class="card card-proyecto">
-                  <img src="./img/uxui-prototipo.png" class="card-img-top" alt="Imagen prototipo de App de V.I.Party"> 
+                  <img src="./img/Ux-ui.png" class="card-img-top" alt="Imagen prototipo de App de V.I.Party"> 
                   <div class="card-body">
                     <h5 class="card-title">V.I.Party</h5>
                     <p class="card-text">App para gestión de eventos sociales, desarrollada con enfoque UX/UI.</p>
                     <a href="https://www.figma.com/design/BZ7qKrjxiX0ZVbupHwktDF/Entrega-Final--Barrionuevo-Paula?node-id=0-1&p=f&t=xZZJnDEycaVOXh2x-0" class="btn btn-primary">Ver Reporte Ux</a>
-                    <a href="https://www.figma.com/proto/BZ7qKrjxiX0ZVbupHwktDF/Entrega-Final--Barrionuevo-Paula?node-id=429-10623&starting-point-node-id=429%3A10623" class="btn btn-primary">Ver Prototitpo</a>
+                    <a href="https://www.figma.com/proto/BZ7qKrjxiX0ZVbupHwktDF/Entrega-Final--Barrionuevo-Paula?node-id=429-10623&starting-point-node-id=429%3A10623" class="btn btn-secundary">Ver Prototitpo</a>
                   </div>
                 </div>
               </div>
@@ -103,12 +104,36 @@
                   <h5 class="card-title">Portfolio</h5>
                   <p class="card-text">Primer proyecto en Desarrollo Web: Portfolio personal.</p>
                   <a href="#" class="btn btn-primary">Ver Portfolio</a>
-                  <a href="#" class="btn btn-primary">Ver Código</a>
+                  <a href="#" class="btn btn-secundary">Ver Código</a>
                   <!--Falta linkear-->
                 </div>
               </div>
             </div>   
           </div> 
+        </section>
+
+        <section id="habilidades" class="contenido-habildades">
+          <h2>Habilidades</h2>
+
+          <div class="habilidades">
+            <p>Ux Ui: Primer Nivel</p>
+            <div class="progress" role="progressbar" aria-label="Nivel de HTML" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar" style="width: 100%"></div>
+          </div>
+
+          <div class="habilidades">
+            <p>HTML</p>
+            <div class="progress" role="progressbar" aria-label="Nivel de HTML" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar" style="width: 75%"></div>
+          </div>
+
+          <div class="habilidades">
+            <p>CSS</p>
+            <div class="progress" role="progressbar" aria-label="Nivel de HTML" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar" style="width: 50%"></div>
+          </div>
+
+          
         </section>
 
     </main>

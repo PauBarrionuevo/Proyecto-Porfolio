@@ -29,6 +29,7 @@ body {
     background-color: #F4EDE4;
     font-family: "Poppins", sans-serif;
     color: #2F1B0C;
+    padding-top: 70px;
 }
 
 /*Header = Navbar + bootstrap*/
@@ -59,6 +60,7 @@ body {
 
 /*Hero*/
 .hero { 
+    min-height: 100vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -132,7 +134,7 @@ body {
 
 /*Seccion Sobre mí*/
 .sobre-mi {
-    min-height: 90vh;
+    min-height: 100vh;
     padding: 80px 20px;
     background-color:#d0b39f;
 }
@@ -176,6 +178,7 @@ body {
 
 /*Seccion Proyectos*/
 .proyectos {
+    min-height: 100vh;
     padding: 80px 20px;
     background-color:#F4EDE4;
 }
@@ -208,6 +211,53 @@ body {
     width: 100%;
     max-width: 350px;
 }
+.btn-primary{
+    background-color: #567572;
+    border: 2px solid #567572;
+    color: #F4EDE4;
+}
+.btn-primary:hover {
+    background-color: #6B4226;
+    border: 2px solid #6B4226;
+}
+.btn-secundary {
+    background-color: #F4EDE4;
+    color: #567572;
+    border: 2px solid #567572;
+}
+
+/*Seccion Habilidades*/
+#habilidades {
+    min-height: 100vh;
+    background-color: #d0b39f;
+    text-align: center;
+    padding: 3rem 1rem; 
+}
+#habilidades h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #2F1B0C;
+}
+.habilidades {
+    font-weight: 600;
+    color: #2F1B0C;
+    text-align: left;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+}
+.habilidades p {
+    margin: 0.5rem;
+    font-weight: 600;
+    color: #2F1B0C;
+}
+.progress {
+    background-color: #F4EDE4;
+}
+.progress-bar {
+    background-color: #2F1B0C;
+}
+    
+    
 
 /*Media query
 .hero, .sobre-mi {
