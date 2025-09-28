@@ -1,273 +1,266 @@
-/*Elemento { propiedad: valor;}*/
-
-
-/*Paleta de colores>
-Fondo: #F4EDE4 (beige claro, luminoso y neutro)
-heard: #d0b39f
-Primario: #6B4226 (marrón cálido, firme y elegante)
-Secundario: #A47148 (terracota suave, aporta cercanía)
-Texto: #2F1B0C (marrón muy oscuro, casi negro → buena legibilidad)
-Acento (misma gama): #D4A373 (arena/dorado tierra, resalta sin romper la armonía)
-activo background-color: #567572; color:#F4EDE4;(fondo verde musgo y texto beige claro)
-inactivo background-color: #F4EDE4;color:#567572 (fondo beige claro y texto verde musgo) POSIBLE HOVER:tono más oscuro #405B56
-
-
-Contraste: opciones
-Verde oliva profundo: #556B2F
-Azul petróleo: #264653 
-Naranja quemado: #E76F51 /
-
-
+@charset "UTF-8";
+/*comentario en sass y css*/
+/*Paleta de colores*/
+/*Tipografia*/
+/*Tamaño de texto*/
+/*Botones personalizados*/
 /*Reset*/
-* {margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /*General*/
 body {
-    background-color: #F4EDE4;
-    font-family: "Poppins", sans-serif;
-    color: #2F1B0C;
-    padding-top: 70px;
+  background-color: #F4EDE4;
+  font-family: "Poppins", sans-serif;
+  color: #2F1B0C;
+  padding-top: 70px;
 }
 
-/*Header = Navbar + bootstrap*/
-.bg-header { 
-    background-color: #d0b39f;
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center;
-    padding-left: 0%;
-    padding-right: 10px;
-    margin-left: 0;
-    white-space: nowrap;
+a {
+  text-decoration: none;
 }
+
+/*Header... texto sobre mi superpuesto, se nota diferencia entre fondo y logo*/
+.bg-header {
+  background-color: #d0b39f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 10px;
+}
+
 .bg-header .nav-link {
-    color: #2F1B0C;
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
+  color: #2F1B0C;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
 }
-.bg-header.nav-link:hover {
-    border: none;
+
+.navbar .logo {
+  max-width: 15%;
 }
-.navbar-brand .logo {
-    max-width: 15%;
-}
+
 .navbar-toggler {
-    background-color: #d0b39f;
+  background-color: #d0b39f;
 }
 
 /*Hero*/
-.hero { 
-    min-height: 100vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 40px;
-    padding: 40px 20px;
-    background-color: #F4EDE4;
-    flex-wrap: wrap;
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 20px;
+  background-color: #F4EDE4;
+  flex-wrap: wrap;
 }
-.presentacion { max-width: 500px;
+
+.presentacion {
+  text-align: center;
 }
+
 .presentacion h1 {
-    font-size: 2.5rem;
-    text-align: center;
-    color: #6B4226;
-    font-family: "Poppins", sans-serif;
-    margin-bottom: 10 px;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #2F1B0C;
+  margin-bottom: 10px;
 }
+
 .presentacion h2 {
-    font-size: 1.5rem;
-    text-align: center;
-    color: #6B4226;
-    margin-bottom: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #2F1B0C;
+  margin-bottom: 10px;
 }
-.presentacion h2 span {
-    display: block;
-}     
-.imagen-hero img {
-    max-width: 100%;
-    height: auto;
-    max-height: 300px;
-    border-radius: 50%;
-    box-shadow: 0 4px 12px;
-}
-/*Button*/
-.hero button {
-    margin-right: 10px;
-    padding: 10px 20px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    cursor: pointer;
-    border-radius: 8px;
-}
-.hero .presentacion .activo {
-    background-color: #567572;
-    border: 2px solid #567572;
-    color: #F4EDE4;
-}
-.hero .presentacion .activo a {
-    color: #F4EDE4;
-    text-decoration: none;
-}
-.inactivo {
-    background-color: #F4EDE4;
-    color: #567572;
-    border: 2px solid #567572;
-}
-.hero ,.presentacion .inactivo a {
-    color: #567572;
-    text-decoration: none;
-}
-/*Media Query*/
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;}
-    .presentacion {
-        max-width: 100%;}
-    .imagen-hero img {
-        max-width: 200px;}
-    }
 
-/*Seccion Sobre mí*/
+.hero img {
+  max-width: 100%;
+  height: auto;
+  max-height: 300px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 12px;
+}
+
+/*Botones*/
+.btn-activo {
+  background-color: #567572;
+  color: #F4EDE4;
+  border: 2px solid #567572;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-inactivo {
+  background-color: #F4EDE4;
+  color: #567572;
+  border: 2px solid #F4EDE4;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  border: 2px solid #567572;
+}
+
+/*Sobre mi ...la imagen se corta y no queda todo dentro de la misma pantalla*/
 .sobre-mi {
-    min-height: 100vh;
-    padding: 80px 20px;
-    background-color:#d0b39f;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  gap: 40px;
+  padding: 80px 20px;
+  background-color: #d0b39f;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  gap: 40px;
 }
-.contenedor-sobre-mi {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    max-width: 1100px;
-    margin: 0 auto;
-    gap: 40px;
-}
+
 .texto-sobre-mi {
-    flex: 1 1 500px;
+  flex: 1 1 500px;
 }
+
 .texto-sobre-mi h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color:#2F1B0C;
-    text-align: center;
+  font-size: 2.5rem;
+  color: #2F1B0C;
+  text-align: center;
+  margin-bottom: 20px;
 }
+
 .texto-sobre-mi p {
-    font-size: 1.1rem;
-    text-align: center;
-    line-height: 1.6;
-    color: #2F1B0C;
-    margin-bottom: 15px;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.5rem;
+  color: #2F1B0C;
+  margin-bottom: 15px;
 }
+
 .texto-sobre-mi p span {
-    display: block;}
+  display: block;
+}
+
 .imagen-sobre-mi {
-    flex: 1 1 350px;
-    text-align: center;
+  flex: 1 1 350px;
+  text-align: center;
 }
+
 .imagen-sobre-mi img {
-    width: 100%;
-    max-width: 350px;
-    border-radius: 20px;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 20px;
 }
 
-
-/*Seccion Proyectos*/
+/*Proyectos... cards no estan centradas */
 .proyectos {
-    min-height: 100vh;
-    padding: 80px 20px;
-    background-color:#F4EDE4;
+  min-height: 100vh;
+  padding: 80px 20px;
+  background-color: #F4EDE4;
 }
+
 .titulo-seccion {
-    text-align: center;
-    font-size: 2,5rem;
-    margin-bottom: 50px;
-    color: #2F1B0C;
-    font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #2F1B0C;
+  font-family: "Poppins", sans-serif;
 }
+
 .card-proyecto {
-    background-color: #fff;
-    border: none;
-    border-radius: 15px;
+  background-color: #fff;
+  color: #6B4226;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  border-radius: 15px;
+  border-radius: 15px;
 }
+
 .card-proyecto img {
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .card-title {
-    text-align: center;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #6B4226;
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #6B4226;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
 }
-.proyectos .card-proyecto img .card-img-top1{
-    width: 100%;
-    max-width: 350px;
+
+.proyectos .card-proyecto img .card-img-top1 {
+  width: 100%;
+  max-width: 350px;
 }
-.btn-primary{
-    background-color: #567572;
-    border: 2px solid #567572;
-    color: #F4EDE4;
-}
+
+/*no anda hover*/
 .btn-primary:hover {
-    background-color: #6B4226;
-    border: 2px solid #6B4226;
-}
-.btn-secundary {
-    background-color: #F4EDE4;
-    color: #567572;
-    border: 2px solid #567572;
+  background-color: #6B4226;
+  border: 2px solid #6B4226;
 }
 
-/*Seccion Habilidades*/
 #habilidades {
-    min-height: 100vh;
-    background-color: #d0b39f;
-    text-align: center;
-    padding: 3rem 1rem; 
+  min-height: 100vh;
+  background-color: #d0b39f;
+  text-align: center;
+  padding: 3rem 1rem;
 }
-#habilidades h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: #2F1B0C;
-}
-.habilidades {
-    font-weight: 600;
-    color: #2F1B0C;
-    text-align: left;
-    margin-bottom: 1.5rem;
-    max-width: 600px;
-}
-.habilidades p {
-    margin: 0.5rem;
-    font-weight: 600;
-    color: #2F1B0C;
-}
-.progress {
-    background-color: #F4EDE4;
-}
-.progress-bar {
-    background-color: #2F1B0C;
-}
-    
-    
 
-/*Media query
-.hero, .sobre-mi {
-    min-height: 90vh;}
+#habilidades h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #2F1B0C;
+  font-family: "Poppins", sans-serif;
+}
+
+.habilidades {
+  font-weight: 600;
+  color: #2F1B0C;
+  text-align: left;
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+}
+
+.habilidades p {
+  margin: 0.5rem;
+  font-weight: 600;
+  color: #2F1B0C;
+}
+
+.progress {
+  background-color: #F4EDE4;
+}
+
+.progress-bar {
+  background-color: #2F1B0C;
+}
 
 /*Footer*/
 footer {
-    background-color: #6B4226;
-    color: #d0b39f;
-    text-align: center;
-    padding: 20px;
-    font-size: 1rem;
-    }
+  background-color: #6B4226;
+  color: #F4EDE4;
+  text-align: center;
+  padding: 20px;
+  font-size: 1rem;
+}
+
+/*Resposive: queda logo y menu uno abajo de otro.
+cards sin esopacios 
+botones de card sin espacios
+card sin espacios */
+
+/*# sourceMappingURL=styles.css.map */

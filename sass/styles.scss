@@ -1,0 +1,216 @@
+//*abrir Git Bash, ejecutar: sass --watch sass/styles.scss css/styles.css
+//*comentario en sass
+/*comentario en sass y css*/ 
+
+//*IMPORT o use "utilidades/variables" as *;
+@use "utilidades/variables" as *;
+@use "utilidades/mixin" as *;
+
+/*Reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*General*/
+body {
+    background-color: $color-fondo;
+    font-family: $fuente-principal;
+    color: $color-texto;
+    padding-top: 70px;
+}
+a {text-decoration: none;}
+
+/*Header... texto sobre mi superpuesto, se nota diferencia entre fondo y logo*/
+.bg-header {
+    background-color: $color-fondo-dos;
+    @include flex-center;
+    justify-content: space-between;
+    padding-right: 10px;
+}
+.bg-header .nav-link {
+    color: $color-texto;
+    font-weight: 600;
+    font-family: $fuente-principal;
+    
+}
+.navbar .logo {
+    max-width: 15%;
+}
+.navbar-toggler {
+    background-color: $color-fondo-dos;
+}
+/*Hero*/
+.hero{
+    min-height: 100vh;
+    @include flex-center;
+    gap: 40px;
+    padding: 40px 20px;
+    background-color: $color-fondo;
+    flex-wrap: wrap;
+}
+.presentacion {
+    text-align: center;
+}
+.presentacion h1 {
+    font-size: $titulo-grande;
+    text-align: center;
+    color: $color-texto;
+    margin-bottom: 10px;
+}
+.presentacion h2 {
+    font-size: $titulo-mediano;
+    text-align: center;
+    color: $color-texto;
+    margin-bottom: 10px;
+}
+.hero img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 12px;
+}
+/*Botones*/
+.btn-activo {
+    @include button-style (
+        $color-boton-activo, 
+        $color-boton-activo-texto, 
+        $fuente-principal,); 
+}
+.btn-inactivo {
+    @include button-style (
+        $color-boton-inactivo, 
+        $color-boton-inactivo-texto, 
+        $fuente-principal,);
+        border: 2px solid $color-boton-activo;
+}
+/*Sobre mi ...la imagen se corta y no queda todo dentro de la misma pantalla*/
+.sobre-mi{
+    min-height: 100vh;
+    @include flex-center;
+    justify-content: space-around;
+    gap: 40px;
+    padding: 80px 20px;
+    background-color: $color-fondo-dos;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    gap: 40px;
+}
+.texto-sobre-mi {
+    flex: 1 1 500px;
+}
+.texto-sobre-mi h2 {
+    font-size: $titulo-grande;
+    color: $color-texto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.texto-sobre-mi p {
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.5rem;
+    color: $color-texto;
+    margin-bottom: 15px;
+}
+.texto-sobre-mi p span {
+    display: block;
+}
+.imagen-sobre-mi {
+    flex: 1 1 350px;
+    text-align: center;
+}
+.imagen-sobre-mi img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 20px;
+}
+
+/*Proyectos... cards no estan centradas */
+.proyectos {
+    min-height: 100vh;
+    padding: 80px 20px;
+    background-color: $color-fondo;
+}
+.titulo-seccion {
+    text-align: center;
+    font-size: $titulo-grande;
+    margin-bottom: 50px;
+    color: $color-texto;
+    font-family: $fuente-principal;
+}
+.card-proyecto {
+    @include car-style (
+        $color-card,
+        $color-principal,
+        $fuente-principal,);
+        border-radius: 15px;
+}
+.card-proyecto img {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.card-title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: $color-principal;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+.proyectos .card-proyecto img .card-img-top1{
+    width: 100%;
+    max-width: 350px;
+}
+/*no anda hover*/
+.btn-primary:hover {
+    background-color: #6B4226;
+    border: 2px solid #6B4226;
+}
+#habilidades {
+    min-height: 100vh;
+    background-color: $color-fondo-dos;
+    text-align: center;
+    padding: 3rem 1rem; 
+}
+#habilidades h2 {
+    font-size: $titulo-grande;
+    margin-bottom: 2rem;
+    color: $color-texto;
+    font-family: $fuente-principal;
+}
+.habilidades {
+    font-weight: 600;
+    color: $color-texto;
+    text-align: left;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+}
+.habilidades p {
+    margin: 0.5rem;
+    font-weight: 600;
+    color: $color-texto;
+}
+.progress {
+    background-color: $color-fondo;
+}
+.progress-bar {
+    background-color: $color-texto;
+}
+
+/*Footer*/
+footer {
+    background-color: $color-principal;
+    color: $color-fondo;
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+    }
+
+/*Resposive: queda logo y menu uno abajo de otro.
+cards sin esopacios 
+botones de card sin espacios
+card sin espacios */

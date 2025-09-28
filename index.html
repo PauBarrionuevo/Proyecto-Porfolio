@@ -26,7 +26,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="#navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a class="nav-link" href="#home">Home</a>
@@ -40,9 +40,9 @@
             <li class="nav-item">
               <a class="nav-link" href="#habilidades">Habilidades</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" href="#contacto">Contacto</a>
-            </li>
+            </li>-->
           </ul>
         </div>
       </div>
@@ -58,12 +58,8 @@
             <div class="presentacion">
                 <h1>Hola, soy Pau</h1>
                 <h2>Desarrolladora Web <span>y</span> Diseñadora Ux Ui</h2>
-                <button class="activo">
-                    <a href="#proyectos">Proyectos</a>
-                </button> 
-                <button class="inactivo">
-                    <a href="#contacto">Contacto</a>
-                </button>
+                <a href="#proyectos" class="btn-activo">Proyectos</a>
+                <a href="#contacto" class="btn-inactivo">Contacto</a>
             </div>
         </section>
 
@@ -83,7 +79,7 @@
         <section id="proyectos" class="proyectos">
           <div>
             <h2 class="titulo-seccion">Proyectos</h2>
-          <div class="row">
+          <div class="row justify-content-center g-4">
               <!--Card 1-->
               <div class="col-md-4">
                 <div class="card card-proyecto">
@@ -91,8 +87,8 @@
                   <div class="card-body">
                     <h5 class="card-title">V.I.Party</h5>
                     <p class="card-text">App para gestión de eventos sociales, desarrollada con enfoque UX/UI.</p>
-                    <a href="https://www.figma.com/design/BZ7qKrjxiX0ZVbupHwktDF/Entrega-Final--Barrionuevo-Paula?node-id=0-1&p=f&t=xZZJnDEycaVOXh2x-0" class="btn btn-primary">Ver Reporte Ux</a>
-                    <a href="https://www.figma.com/proto/BZ7qKrjxiX0ZVbupHwktDF/Entrega-Final--Barrionuevo-Paula?node-id=429-10623&starting-point-node-id=429%3A10623" class="btn btn-secundary">Ver Prototitpo</a>
+                    <a href="https://www.figma.com/design/BZ7qKrjxiX0ZVbupHwktDF/Entrega-Final--Barrionuevo-Paula?node-id=0-1&p=f&t=xZZJnDEycaVOXh2x-0" class="btn-activo">Ver Reporte Ux</a>
+                    <a href="https://www.figma.com/proto/BZ7qKrjxiX0ZVbupHwktDF/Entrega-Final--Barrionuevo-Paula?node-id=429-10623&starting-point-node-id=429%3A10623" class="btn-inactivo">Ver Prototitpo</a>
                   </div>
                 </div>
               </div>
@@ -103,8 +99,8 @@
                   <div class="card-body">
                   <h5 class="card-title">Portfolio</h5>
                   <p class="card-text">Primer proyecto en Desarrollo Web: Portfolio personal.</p>
-                  <a href="#" class="btn btn-primary">Ver Portfolio</a>
-                  <a href="#" class="btn btn-secundary">Ver Código</a>
+                  <a href="#" class="btn-activo">Ver Portfolio</a>
+                  <a href="#" class="btn-inactivo">Ver Código</a>
                   <!--Falta linkear-->
                 </div>
               </div>
@@ -132,7 +128,6 @@
             <div class="progress" role="progressbar" aria-label="Nivel de HTML" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
               <div class="progress-bar" style="width: 50%"></div>
           </div>
-
           
         </section>
 

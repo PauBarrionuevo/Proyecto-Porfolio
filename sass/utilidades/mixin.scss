@@ -1,0 +1,29 @@
+//Mixin para centrar con flex*/
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Botones personalizados*/
+@mixin button-style ($bg, $color, $fuente) {
+    background-color: $bg;
+    color: $color;
+    border: 2px solid $bg;
+    border-radius: 8px;
+    font-family: $fuente;
+    font-weight: 600;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+@mixin car-style ($bg, $color, $fuente,) {
+    background-color: $bg;
+    color: $color;
+    font-family: $fuente;
+    border: none;
+    border-radius: 15px;
+}
+
+    
