@@ -23,14 +23,14 @@ a {
   text-decoration: none;
 }
 
-/*Header... texto sobre mi superpuesto, se nota diferencia entre fondo y logo*/
+/*Header... texto "sobre mi" superpuesto: SOBRE queda arriba y Mi abajo*/
 .bg-header {
   background-color: #d0b39f;
   display: flex;
   justify-content: center;
   align-items: center;
   justify-content: space-between;
-  padding-right: 10px;
+  padding-right: 15px;
 }
 
 .bg-header .nav-link {
@@ -40,7 +40,8 @@ a {
 }
 
 .navbar .logo {
-  max-width: 15%;
+  max-width: 120px;
+  height: auto;
 }
 
 .navbar-toggler {
@@ -97,6 +98,7 @@ a {
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
+  margin-right: 10px;
 }
 
 .btn-inactivo {
@@ -113,7 +115,7 @@ a {
   border: 2px solid #567572;
 }
 
-/*Sobre mi ...la imagen se corta y no queda todo dentro de la misma pantalla*/
+/*Sobre mi*/
 .sobre-mi {
   min-height: 100vh;
   display: flex;
@@ -125,7 +127,6 @@ a {
   background-color: #d0b39f;
   flex-wrap: wrap;
   margin: 0 auto;
-  gap: 40px;
 }
 
 .texto-sobre-mi {
@@ -162,7 +163,7 @@ a {
   border-radius: 20px;
 }
 
-/*Proyectos... cards no estan centradas */
+/*Proyectos*/
 .proyectos {
   min-height: 100vh;
   padding: 80px 20px;
@@ -184,6 +185,7 @@ a {
   border: none;
   border-radius: 15px;
   border-radius: 15px;
+  margin: 5px 15px;
 }
 
 .card-proyecto img {
@@ -196,7 +198,7 @@ a {
 .card-title {
   text-align: center;
   font-size: 1.5rem;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   color: #6B4226;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
@@ -207,12 +209,12 @@ a {
   max-width: 350px;
 }
 
-/*no anda hover*/
-.btn-primary:hover {
-  background-color: #6B4226;
-  border: 2px solid #6B4226;
+.card-body a {
+  margin: 5px;
+  display: inline-block;
 }
 
+/*Habilidades: background-color no ocupa todo el ancho de la pantalla*/
 #habilidades {
   min-height: 100vh;
   background-color: #d0b39f;
@@ -227,7 +229,7 @@ a {
   font-family: "Poppins", sans-serif;
 }
 
-.habilidades {
+.habilidades-item {
   font-weight: 600;
   color: #2F1B0C;
   text-align: left;
@@ -243,10 +245,45 @@ a {
 
 .progress {
   background-color: #F4EDE4;
+  max-width: 600px;
 }
 
 .progress-bar {
   background-color: #2F1B0C;
+}
+
+/*Contacto: no puedo sacar el azul del link*/
+#contacto {
+  min-height: 100vh;
+  background-color: #F4EDE4;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+#contacto h2 {
+  font-size: 2.5rem;
+  color: #2F1B0C;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 20px;
+}
+
+#contacto a {
+  color: #2F1B0C;
+  text-decoration: none;
+}
+#contacto a:hover {
+  color: #6B4226;
+}
+
+.contacto p {
+  margin: 0.5rem;
+  font-weight: 600;
+  color: #2F1B0C;
+}
+
+.contacto i {
+  margin-right: 8px;
+  color: #6B4226;
 }
 
 /*Footer*/
@@ -258,9 +295,40 @@ footer {
   font-size: 1rem;
 }
 
-/*Resposive: queda logo y menu uno abajo de otro.
-cards sin esopacios 
-botones de card sin espacios
-card sin espacios */
+/*Animaciones, transiciones,transformaciones y grandientes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.presentacion h1, h2 {
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+/*Grandientes en el Hero*/
+.navbar {
+  background: linear-gradient(to right, #d0b39f, rgb(241.5244755245, 233.2097902098, 227.4755244755));
+}
+
+/*Transition  en bnt*/
+.btn-activo, .btn-inactivo {
+  transition: all 0.3s ease-in-out;
+}
+.btn-activo:hover, .btn-inactivo:hover {
+  transform: scale(1.05);
+}
+
+/*Transformacion: separar las cards y volver a ver la transformacion*/
+.card-proyecto {
+  transition: transform 0.3s ease;
+}
+.card-proyecto:hover {
+  transform: scale(1.2);
+}
 
 /*# sourceMappingURL=styles.css.map */

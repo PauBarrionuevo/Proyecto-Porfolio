@@ -10,6 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <!--Mi Css-->
     <link rel="stylesheet" href="./css/styles.css">
+    <!--FontAwesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 
 </head>
 
@@ -22,14 +25,14 @@
             <img src="./img/Logo 2.png" alt="Logo del desarrollador" class="logo">
           </a>
     <!--Boton hamburguesa-->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#home">Home</a>
+              <a class="nav-link" href="#hero">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#sobre-mi">Sobre mí</a>
@@ -40,9 +43,9 @@
             <li class="nav-item">
               <a class="nav-link" href="#habilidades">Habilidades</a>
             </li>
-            <!-- <li class="nav-item">
+            <li class="nav-item">
               <a class="nav-link" href="#contacto">Contacto</a>
-            </li>-->
+            </li>
           </ul>
         </div>
       </div>
@@ -50,7 +53,7 @@
   </header>
 
     <main>
-        <section class="hero">
+        <section id="hero" class="hero">
             
             <div class="imagen-hero">
                 <img src="./img/perfil.jpg" alt="Retrato de Pau, Desarrolladora Web y Diseñadora Ux Ui">
@@ -101,34 +104,58 @@
                   <p class="card-text">Primer proyecto en Desarrollo Web: Portfolio personal.</p>
                   <a href="#" class="btn-activo">Ver Portfolio</a>
                   <a href="#" class="btn-inactivo">Ver Código</a>
-                  <!--Falta linkear-->
                 </div>
               </div>
             </div>   
           </div> 
         </section>
 
-        <section id="habilidades" class="contenido-habildades">
+        <section id="habilidades" class="habilidades">
           <h2>Habilidades</h2>
 
-          <div class="habilidades">
+          <div class="habilidades-item" c>
             <p>Ux Ui: Primer Nivel</p>
             <div class="progress" role="progressbar" aria-label="Nivel de HTML" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
               <div class="progress-bar" style="width: 100%"></div>
           </div>
 
-          <div class="habilidades">
+          <div class="habilidades-item">
             <p>HTML</p>
             <div class="progress" role="progressbar" aria-label="Nivel de HTML" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
               <div class="progress-bar" style="width: 75%"></div>
           </div>
 
-          <div class="habilidades">
+          <div class="habilidades-item">
             <p>CSS</p>
             <div class="progress" role="progressbar" aria-label="Nivel de HTML" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
               <div class="progress-bar" style="width: 50%"></div>
           </div>
+
+          <div class="habilidades-item">
+            <p>SCSS</p>
+            <div class="progress" role="progressbar" aria-label="Nivel de HTML" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar" style="width: 50%"></div>
+          </div>
+
+          <div class="habilidades-item">
+            <p>Animaciones</p>
+            <div class="progress" role="progressbar" aria-label="Nivel de HTML" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar" style="width: 25%"></div>
+          </div>
           
+        </section>
+
+         <!--Capaz algun icono para que mantenca consistencia con los label anteriores-->
+        
+
+        <section id="contacto" class="contacto">
+            <h2>Contacto</h2>
+            
+              <p><i class="fa-solid fa-phone"></i> <a href="tel:+54 3512000000">+54 351 2000000</a></p>
+              <p><i class="fa-solid fa-envelope"></i> <a href="mailto:paulabarrionuevo@gmail.com">paulabarrionuevo@gmail.com</a></p>
+              <p><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/...">LinkedIn</a></p>
+
+            <!--Falta emoji o iconos-->
         </section>
 
     </main>

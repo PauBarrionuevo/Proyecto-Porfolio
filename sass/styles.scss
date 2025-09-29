@@ -1,10 +1,12 @@
 //*abrir Git Bash, ejecutar: sass --watch sass/styles.scss css/styles.css
+//*Para pushear canbios: 0)git brach:para saber rama principal 1) git add . 2)git commit -m "comentarios de cambios" 3)git push origin master
 //*comentario en sass
 /*comentario en sass y css*/ 
 
 //*IMPORT o use "utilidades/variables" as *;
 @use "utilidades/variables" as *;
 @use "utilidades/mixin" as *;
+@use "sass:color";
 
 /*Reset*/
 * {
@@ -22,21 +24,21 @@ body {
 }
 a {text-decoration: none;}
 
-/*Header... texto sobre mi superpuesto, se nota diferencia entre fondo y logo*/
+/*Header... texto "sobre mi" superpuesto: SOBRE queda arriba y Mi abajo*/
 .bg-header {
     background-color: $color-fondo-dos;
     @include flex-center;
     justify-content: space-between;
-    padding-right: 10px;
+    padding-right: 15px;
 }
 .bg-header .nav-link {
     color: $color-texto;
     font-weight: 600;
     font-family: $fuente-principal;
-    
 }
 .navbar .logo {
-    max-width: 15%;
+    max-width: 120px;
+    height: auto;
 }
 .navbar-toggler {
     background-color: $color-fondo-dos;
@@ -77,16 +79,17 @@ a {text-decoration: none;}
     @include button-style (
         $color-boton-activo, 
         $color-boton-activo-texto, 
-        $fuente-principal,); 
+        $fuente-principal);
+        margin-right: 10px; 
 }
 .btn-inactivo {
     @include button-style (
         $color-boton-inactivo, 
         $color-boton-inactivo-texto, 
-        $fuente-principal,);
+        $fuente-principal);
         border: 2px solid $color-boton-activo;
 }
-/*Sobre mi ...la imagen se corta y no queda todo dentro de la misma pantalla*/
+/*Sobre mi*/
 .sobre-mi{
     min-height: 100vh;
     @include flex-center;
@@ -96,7 +99,6 @@ a {text-decoration: none;}
     background-color: $color-fondo-dos;
     flex-wrap: wrap;
     margin: 0 auto;
-    gap: 40px;
 }
 .texto-sobre-mi {
     flex: 1 1 500px;
@@ -127,7 +129,7 @@ a {text-decoration: none;}
     border-radius: 20px;
 }
 
-/*Proyectos... cards no estan centradas */
+/*Proyectos*/
 .proyectos {
     min-height: 100vh;
     padding: 80px 20px;
@@ -144,8 +146,9 @@ a {text-decoration: none;}
     @include car-style (
         $color-card,
         $color-principal,
-        $fuente-principal,);
+        $fuente-principal);
         border-radius: 15px;
+        margin: 5px 15px;
 }
 .card-proyecto img {
     height: 200px;
@@ -156,7 +159,7 @@ a {text-decoration: none;}
 .card-title {
     text-align: center;
     font-size: 1.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     color: $color-principal;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
@@ -165,11 +168,12 @@ a {text-decoration: none;}
     width: 100%;
     max-width: 350px;
 }
-/*no anda hover*/
-.btn-primary:hover {
-    background-color: #6B4226;
-    border: 2px solid #6B4226;
+.card-body a {
+    margin: 5px;
+    display: inline-block;
 }
+
+/*Habilidades: background-color no ocupa todo el ancho de la pantalla*/
 #habilidades {
     min-height: 100vh;
     background-color: $color-fondo-dos;
@@ -182,7 +186,7 @@ a {text-decoration: none;}
     color: $color-texto;
     font-family: $fuente-principal;
 }
-.habilidades {
+.habilidades-item {
     font-weight: 600;
     color: $color-texto;
     text-align: left;
@@ -192,14 +196,48 @@ a {text-decoration: none;}
 .habilidades p {
     margin: 0.5rem;
     font-weight: 600;
-    color: $color-texto;
+    color: $color-texto;  
 }
 .progress {
     background-color: $color-fondo;
+    max-width: 600px;
 }
 .progress-bar {
     background-color: $color-texto;
 }
+
+
+/*Contacto: no puedo sacar el azul del link*/
+#contacto {
+    min-height: 100vh;
+    background-color: $color-fondo;
+    text-align: center;
+    padding: 3rem 1rem; 
+}
+#contacto h2 {
+    font-size: $titulo-grande;
+    color: $color-texto;
+    font-family: $fuente-principal;
+    margin-bottom: 20px;
+}
+#contacto a {
+    color: $color-texto;
+    text-decoration: none;
+
+    &:hover {
+        color: $color-principal;
+    }
+}
+.contacto p {
+    margin: 0.5rem;
+    font-weight: 600;
+    color: $color-texto;
+}
+.contacto i {
+    margin-right: 8px;
+    color: $color-principal;
+}
+
 
 /*Footer*/
 footer {
@@ -210,7 +248,50 @@ footer {
     font-size: 1rem;
     }
 
-/*Resposive: queda logo y menu uno abajo de otro.
-cards sin esopacios 
-botones de card sin espacios
-card sin espacios */
+/*Animaciones, transiciones,transformaciones y grandientes */
+@keyframes fadeInUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(30px); 
+    }
+  to   { 
+    opacity: 1; 
+    transform: translateY(0); 
+    }
+}
+
+.presentacion h1, h2, {
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+
+/*Grandientes en el Hero*/
+.navbar {
+    background: linear-gradient(
+        to right, 
+        $color-fondo-dos, 
+        color.adjust($color-fondo-dos, $lightness: 20%)
+        );
+}
+
+
+
+/*Transition  en bnt*/
+.btn-activo, .btn-inactivo {
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+
+/*Transformacion: separar las cards y volver a ver la transformacion*/
+.card-proyecto {
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
